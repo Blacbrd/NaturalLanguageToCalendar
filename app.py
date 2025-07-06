@@ -147,6 +147,12 @@ def create_events(eventArray):
 
     for event in eventArray:
 
+        if event[1] == 0:
+            event[1] = 24
+        
+        if event[3] == 0:
+            event[3] = 24
+
         create_task(
             event[0],
             datetime(2025, 7, 7, event[1]-1, event[2], 0),
